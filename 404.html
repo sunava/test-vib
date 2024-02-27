@@ -87,10 +87,31 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a title="Home" href="https://intel4coro.github.io/ViB-public/">Home</a>
+        </li>
         
           
             <li>
-              <a title="Contact" href="/ViB-public/page/contact/">Contact</a>
+              <a title="Virtual Labs" href="/ViB-public/page/labs/">Virtual Labs</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Software Tools" href="/ViB-public/page/softwaretools/">Software Tools</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Coming Soon" href="/ViB-public/page/comingsoon/">Coming Soon</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Contact" href="/ViB-public/page/contact/contact/">Contact</a>
             </li>
           
         
@@ -120,16 +141,25 @@
     
     
     <div class="flex-container">
+
       <div class="flex-item-left">
         <div class="sidebar-image-container">
-          <img class="sidebar-image-sticky" src="https://intel4coro.github.io/ViB-public/img/ViB_neutral.jpg">
+          <img class="sidebar-image-sticky" src="https://intel4coro.github.io/ViB-public/img/Wimmelbild_clean%20short.png" width="100%" height="1200px">
         </div>
       </div>
-      <div class="flex-item-right">
-    
-      
+
+      <div class="flex-item-center">
+
         
-        
+
+          
+            
+          
+             -->
+            
+            <img src="img/ViB_banner_Uni_Rot.png" width="80%" style="margin-top: 50px; padding: 15px;">
+
+            
   <div role="main" class="container main-content">
     <div class="text-center">
       <h1 class="error-emoji"></h1>
@@ -146,10 +176,34 @@
   errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
 </script>
 
-    
-    
+        
+            
+          
       </div>
+        
+      <div class="flex-item-right" style="background-color: rgb(135, 161, 172, 0.09);">
+        
+        <div style="position: relative;">
+            <div style="position: fixed; top: 45px; overflow-y: scroll;">
+              <a href="https://www.uni-bremen.de/">
+                <img src='https://intel4coro.github.io/ViB-public/img/UHB_Logo_Web_RGB.png' style="padding: 30%;">
+              </a>
+              <a href="https://ai.uni-bremen.de/">
+                <img src='https://intel4coro.github.io/ViB-public/img/Logo%20-%20IAI%20Schrift.png' style="padding: 25%; margin-top: -15%;">
+              </a>
+              <a id="myImageURL" href="">
+                <img id="myImage" src='https://intel4coro.github.io/ViB-public/img/bmbf.png' style="padding: 25%; margin-top: -10%;">
+              </a>
+            </div>
+        </div>
+
+      </div>
+
+        
     </div>
+
+    
+
     
     
       
@@ -361,6 +415,21 @@
 
 
     
+
+    <script>
+      const images = ['https:\/\/intel4coro.github.io\/ViB-public\/img\/bmbf.png', 'https:\/\/intel4coro.github.io\/ViB-public\/img\/zmml.png', 'https:\/\/intel4coro.github.io\/ViB-public\/img\/van.png'];
+      const urls = ["https://www.bmbf.de/bmbf/de/home/home_node.html","https://www.uni-bremen.de/zmml", "https://oncourse.uni-bremen.de/?redirect=0&theme=ocboosterchild2"]
+      let currentImageIndex = 0;
+
+      setInterval(changeImage, 2000); 
+
+      function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById("myImage").src = images[currentImageIndex];
+        document.getElementById("myImageURL").href = urls[currentImageIndex];
+      }
+
+    </script>
   </body>
 </html>
 

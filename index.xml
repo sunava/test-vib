@@ -14,6 +14,293 @@
     
     <item>
       <title>Research Lab for Household Transportation tasks</title>
+      <link>https://intel4coro.github.io/ViB-public/page/labs/research-lab-for-household-transportation-tasks/</link>
+      <pubDate>Fri, 01 Dec 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/labs/research-lab-for-household-transportation-tasks/</guid>
+      <description>&lt;p&gt;In the research lab you have access to and can experiment with generalized robot plans for transporting objects within man-made human living and working environments, including apartments and retail stores. The generalized robot plan controls different robots transporting a variety of objects in different environments for different purposes in different contexts.&lt;/p&gt;
+&lt;param class=&#34;hidde-after-preview&#34;&gt;
+
+
+
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170765168574&#34;&gt;
+  
+  &lt;div class=&#34;row&#34;&gt;
+
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in envs&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt; 
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in robos&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt; 
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div v-if=&#34;taskes&#34;&gt;
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in taskes&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt; 
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div v-show=&#34;errorMsgs.length !== 0&#34;&gt;
+    &lt;pre class=&#34;alert alert-warning&#34; v-text=&#34;errorMsgs&#34;&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;action-buttons&#34;&gt;
+    &lt;div class=&#34;action-button-wrapper&#34; v-for=&#34;action in actions&#34; :class=&#34;{ &#39;disabled-action-button-wrapper&#39;: !getActionUrl(action) }&#34;&gt;
+      &lt;a class=&#34;btn mr-2 mb-2&#34; target=&#34;_blank&#34; v-text=&#34;action.name&#34; :title=&#34;action.description&#34;
+        :href=&#34;getActionUrl(action)&#34;
+        :class=&#34;{ &#39;btn-primary&#39;: action.primary,&#39;btn-success&#39;: !action.primary, &#39;disabled&#39;: !getActionUrl(action) }&#34;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&#34;module&#34;&gt;
+
+  function isAbsoluteUrl(url) {
+    return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url) || /^data:/i.test(url);
+  }
+  const { createApp, ref } = Vue;
+  const data = JSON.parse(&#34;{\n  \&#34;options\&#34;: {\n    \&#34;environments\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;Household\&#34;,\n        \&#34;value\&#34;: \&#34;household\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/household.png\&#34;,\n        \&#34;knowledge_bases\&#34;: \&#34;https://data.open-ease.org/QA?neem_id=64ccc8bc24cdd341ebdb2aa3\u0026q=findall([Duration%2C Evt]%2C ( event_interval(Evt%2C Begin%2C End)%2C number(End)%2C Duration is End - Begin )%2C Durations)%2C max_member([MaxDuration%2C LongestEvt]%2C Durations).\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;RoboCup Arena\&#34;,\n        \&#34;value\&#34;: \&#34;robocup_arena\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Apartment\&#34;,\n        \&#34;value\&#34;: \&#34;apartment\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/apartment.png\&#34;,\n        \&#34;knowledge_bases\&#34;: \&#34;https://data.open-ease.org/QA?neem_id=64ccbe76181caf1b5ed3c19c\u0026q=findall([Duration%2C Evt]%2C ( event_interval(Evt%2C Begin%2C End)%2C number(End)%2C Duration is End - Begin )%2C Durations)%2C max_member([MaxDuration%2C LongestEvt]%2C Durations).\&#34;\n      }\n    ],\n    \&#34;robots\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;PR2\&#34;,\n        \&#34;value\&#34;: \&#34;pr2\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/pr2_urdf_white1.png\&#34;,\n        \&#34;knowledge_bases\&#34;: \&#34;https://data.open-ease.org/QA?neem_id=6526790ced1a1bfc415a1d38\u0026q=findall%28%5BDuration%2C%20Evt%5D%2C%0A%20%20%28%20%20event_interval%28Evt%2C%20Begin%2C%20End%29%2C%0A%20%20%20%20%20number%28End%29%2C%0A%20%20%20%20%20Duration%20is%20End%20-%20Begin%0A%20%20%29%2C%0A%20%20Durations%29%2C%0Amax_member%28%5BMaxDuration%2C%20LongestEvt%5D%2C%20Durations%29\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Tiago\&#34;,\n        \&#34;value\&#34;: \&#34;tiago\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/tiago_urdf_white1.png\&#34;,\n        \&#34;knowledge_bases\&#34;: \&#34;https://data.open-ease.org/QA?neem_id=630614f0ff954448f792b2c3\u0026q=findall([Duration%2C Evt]%2C ( event_interval(Evt%2C Begin%2C End)%2C number(End)%2C Duration is End - Begin )%2C Durations)%2C max_member([MaxDuration%2C LongestEvt]%2C Durations).\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Armar\&#34;,\n        \&#34;value\&#34;: \&#34;armar\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Donbot\&#34;,\n        \&#34;value\&#34;: \&#34;donbot\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/donbot_urdf_white1.png\&#34;\n      }\n    ],\n    \&#34;tasks\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;Setting \u0026 cleaning the table\&#34;,\n        \&#34;value\&#34;: \&#34;setting_table\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Making Popcorn\&#34;,\n        \&#34;value\&#34;: \&#34;popcorn\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Opening box\&#34;,\n        \&#34;value\&#34;: \&#34;opening_box\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Cutting objects\&#34;,\n        \&#34;value\&#34;: \&#34;cutting\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Pouring\&#34;,\n        \&#34;value\&#34;: \&#34;pouring\&#34;\n      }\n    ]\n  },\n  \&#34;actions\&#34;: [\n    {\n      \&#34;name\&#34;: \&#34;Run Code\&#34;,\n      \&#34;value\&#34;: \&#34;run\&#34;,\n      \&#34;description\&#34;: \&#34;Run code on Binderhub.\&#34;,\n      \&#34;primary\&#34;: true,\n      \&#34;url\&#34;: \&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/COAI/master?urlpath=lab%2Ftree%2Fnotebooks%2F\&#34;,\n      \&#34;options\&#34;: [\n        \&#34;environments\&#34;,\n        \&#34;robots\&#34;,\n        \&#34;tasks\&#34;\n      ],\n      \&#34;available\&#34;: {\n        \&#34;environments=apartment|robots=tiago|tasks=setting_table\&#34;: \&#34;apartment_tiago.ipynb\&#34;,\n        \&#34;environments=apartment|robots=pr2|tasks=setting_table\&#34;: \&#34;apartment_pr2.ipynb\&#34;,\n        \&#34;environments=household|robots=donbot|tasks=setting_table\&#34;: \&#34;household_donbot_setting_table.ipynb\&#34;,\n        \&#34;environments=household|robots=pr2|tasks=setting_table\&#34;: \&#34;household_pr2_setting_table.ipynb\&#34;,\n        \&#34;environments=household|robots=tiago|tasks=setting_table\&#34;: \&#34;household_tiago_setting_table.ipynb\&#34;,\n        \&#34;environments=household|robots=pr2|tasks=popcorn\&#34;: \&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/cram_teaching/legacy?urlpath=lab%2Ftree%2Flectures%2Fdemos%2Fpopcorn.ipynb\&#34;\n      }\n    },\n    {\n      \&#34;name\&#34;: \&#34;Experimental Data\&#34;,\n      \&#34;value\&#34;: \&#34;openease\&#34;,\n      \&#34;description\&#34;: \&#34;OpenEASE\&#34;,\n      \&#34;url\&#34;: \&#34;https://data.open-ease.org/QA?neem_id=\&#34;,\n      \&#34;options\&#34;: [\n        \&#34;environments\&#34;,\n        \&#34;robots\&#34;,\n        \&#34;tasks\&#34;\n      ],\n      \&#34;available\&#34;: {\n        \&#34;environments=household|robots=pr2|tasks=setting_table\&#34;: \&#34;62d5729bb3869a9a9c942f24\&#34;,\n        \&#34;environments=household|robots=pr2|tasks=popcorn\&#34;: \&#34;6357fad897fdbc7c4d98ccbc\&#34;,\n        \&#34;environments=apartment|robots=tiago|tasks=setting_table\&#34;: \&#34;633819942a459501ef4d4209\&#34;\n      }\n    },\n    {\n      \&#34;name\&#34;: \&#34;Assets\&#34;,\n      \&#34;value\&#34;: \&#34;assets\&#34;,\n      \&#34;url\&#34;: \&#34;https://coai-jrc.de/virtual-building/\&#34;\n    }\n  ]\n}\n&#34;)
+  const App = {
+    data() {
+      return {
+        actions: data.actions,
+        selectOptions: Object.keys(data.options).map(v =&gt; {
+          return {
+            name: v,
+            noImg: data.options[v].map(v =&gt; !!v.img).filter(v =&gt; v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+          }
+        }),
+        updatedOptions: Object.keys(data.options).map(v =&gt; {
+          return {
+            name: v,
+            noImg: data.options[v].map(v =&gt; !!v.img).filter(v =&gt; v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+
+          }
+        })
+      };
+    },
+    computed: {
+      selectedNotebookId() {
+        const newValue = this.selectOptions
+          ? this.selectOptions.map(v =&gt; v.name + &#39;=&#39; + v.selected.value).join(&#39;|&#39;)
+          : &#39;&#39;
+        return newValue
+      },
+      selectedNotebookIdUpdated() {
+        const newValue = this.selectOptions
+          ? this.updatedOptions.map(v =&gt; v.name + &#39;=&#39; + v.selected.value).join(&#39;|&#39;)
+          : &#39;&#39;
+        return newValue
+      },
+      errorMsgs() {
+        let _arr = this.actions
+          .filter(act =&gt; !this.getActionUrl(act))
+          .map(act =&gt; `&#34;${act.name}&#34;`)
+        let selectionStr = this.selectedNotebookId
+          ? ` for options: \n\n${this.selectedNotebookId.replace(/\|/g, &#39;\n&#39;)}`
+          : &#39;!&#39;
+        return _arr.length === 0 ? &#39;&#39; : `${_arr.join(&#39;,&#39;)} is currently unavailable${selectionStr}`
+      },
+      envs() {
+        this.filterOptions()
+        return this.updatedOptions.length &gt; 0 ? [this.updatedOptions[0]] : [];
+        
+      },
+      robos() {
+        const selectedEnvironment = this.updatedOptions[0].selected.value;
+        this.filterOptions(selectedEnvironment)
+        return this.updatedOptions.length &gt; 1 ? [this.updatedOptions[1]] : [];
+        
+      },
+      taskes() {
+        if (this.selectOptions.length &gt; 2){
+          const selectedEnvironment = this.updatedOptions[0].selected.value;
+          const selectedRobot = this.updatedOptions[1].selected.value;
+          this.filterOptions(selectedEnvironment,selectedRobot)
+          return this.updatedOptions.length &gt; 2 ? [this.updatedOptions[2]] : [];
+        }
+        return this.selectOptions.length &gt; 2 ? [this.selectOptions[2]] : null;
+      }
+    },
+    methods: {
+      getActionUrl(action) {
+        if (!action.url) return &#39;&#39;
+        let _url = action.url
+        if (action.options &amp;&amp; action.available) {
+          let _notebookUrl = action.available[this.selectedNotebookIdUpdated]
+          if (!_notebookUrl) return &#39;&#39;
+          if (isAbsoluteUrl(_notebookUrl)) return _notebookUrl
+          _url += _notebookUrl
+        }
+        return _url
+      },
+      filterOptions(selectedEnv = &#39;&#39;,selectedRobo = &#39;&#39;){
+        const availableConfigs = this.actions[0].available;
+        if (availableConfigs !== null){
+          const OptionSet = new Set();
+          let OptionList = []
+          let regex = &#39;&#39;;
+          let optionIndex = 1;
+
+          if (selectedEnv === &#39;&#39;) {
+              regex = new RegExp(`environments=([^|]+)`);
+              optionIndex = 0
+          }
+          else if (selectedRobo === &#39;&#39;){
+              regex = new RegExp(`environments=${selectedEnv}\\|robots=([^|]+)`);
+              optionIndex = 1
+          }
+          else {
+              regex = new RegExp(`environments=${selectedEnv}\\|robots=${selectedRobo}\\|tasks=([^|]+)`);
+              optionIndex = 2
+          }
+          
+          for (const key in availableConfigs) {
+              const match = regex.exec(key);
+              if (match) {
+              for (const ind in this.selectOptions[optionIndex].options){
+                  const dicts = this.selectOptions[optionIndex].options[ind]
+                  const name = dicts[&#39;name&#39;]
+                  if ((dicts[&#39;value&#39;] === match[1]) &amp;&amp; (!OptionSet.has(name)))
+                  {
+                  OptionSet.add(name);
+                  OptionList.push(dicts);
+                  }
+              }
+              }
+          }
+
+          
+          OptionList.sort(function(a,b){
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            if (nameA &lt; nameB){
+              return -1;
+            }
+            if (nameA &gt; nameB){
+              return 1;
+            }
+            return 0;
+          })
+
+          this.updatedOptions[optionIndex].options = []
+          this.updatedOptions[optionIndex].options = Array.from(OptionList)
+          this.updatedOptions[optionIndex].selected = this.updatedOptions[optionIndex].options[0]
+
+        }
+        
+      }
+    },
+    components: {
+      &#34;p-button&#34;: primevue.button,
+      &#34;p-overlaypanel&#34;: primevue.overlaypanel,
+      &#34;p-dropdown&#34;: primevue.dropdown
+    }
+  };
+
+  const app = createApp(App);
+  app.use(primevue.config.default);
+  app.mount(&#39;#vueapp1709052170765168574&#39;);
+&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Research Lab for Household Transportation tasks</title>
       <link>https://intel4coro.github.io/ViB-public/posts/research-lab-for-household-transportation-tasks/</link>
       <pubDate>Fri, 01 Dec 2023 10:35:35 -0500</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
@@ -23,7 +310,7 @@
 
 
 
-&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709039847792540742&#34;&gt;
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170763827016&#34;&gt;
   
   &lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in selectOptions&#34;&gt;
@@ -134,7 +421,7 @@
 
   const app = createApp(App);
   app.use(primevue.config.default);
-  app.mount(&#39;#vueapp1709039847792540742&#39;);
+  app.mount(&#39;#vueapp1709052170763827016&#39;);
 &lt;/script&gt;</description>
     </item>
     
@@ -149,7 +436,7 @@
 
 
 
-&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709039847770528247&#34;&gt;
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170765883717&#34;&gt;
   
   &lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in selectOptions&#34;&gt;
@@ -260,8 +547,23 @@
 
   const app = createApp(App);
   app.use(primevue.config.default);
-  app.mount(&#39;#vueapp1709039847770528247&#39;);
+  app.mount(&#39;#vueapp1709052170765883717&#39;);
 &lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Interactive Task Learning by Natural Instruction Methods</title>
+      <link>https://intel4coro.github.io/ViB-public/page/comingsoon/interactive-task-learning-by-natural-instruction-methods/</link>
+      <pubDate>Wed, 29 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/comingsoon/interactive-task-learning-by-natural-instruction-methods/</guid>
+      <description>&lt;p&gt;This research project addresses the challenge of instructing a robot agent to learn novel tasks interactively, specifically in the household domain. The focus of this repository lies on the task of teaching the pouring task by using written instructions with PyCRAM.&lt;/p&gt;
+&lt;p&gt;For more information, you can
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://ease-crc.github.io/itl/&#34;&gt;&lt;b&gt;visit the webpage&lt;/b&gt;&lt;/a&gt; of Interactive Task Learning to get a better idea on how a robot can learn from different teaching methodologies.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/AbhijitVyas/pycram.git/binder?urlpath=lab%2Ftree%2Fexamples%2Fboostrapping_instructions.ipynb&#34;&gt;Run code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/AbhijitVyas/pycram/tree/binder&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -281,6 +583,19 @@
     
     <item>
       <title>euROBIN Demo</title>
+      <link>https://intel4coro.github.io/ViB-public/page/comingsoon/eurobin-demo/</link>
+      <pubDate>Tue, 28 Nov 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/comingsoon/eurobin-demo/</guid>
+      <description>&lt;p&gt;TIAGo robot in the IAI Bremen apartment laboratory.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/Multiverse-Framework/Multiverse-Docker.git/main?urlpath=lab%2Ftree%2Ftestbed_demo.jupyterlab-workspace&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/Multiverse-Framework/Multiverse&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>euROBIN Demo</title>
       <link>https://intel4coro.github.io/ViB-public/posts/eurobin-demo/</link>
       <pubDate>Tue, 28 Nov 2023 14:33:42 -0400</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
@@ -289,6 +604,19 @@
 &lt;div class=&#34;hidde-after-preview&#34;&gt;
 &lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/Multiverse-Framework/Multiverse-Docker.git/main?urlpath=lab%2Ftree%2Ftestbed_demo.jupyterlab-workspace&#34;&gt;Run Code&lt;/a&gt;
 &lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/Multiverse-Framework/Multiverse&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>KnowRob</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/knowrob/</link>
+      <pubDate>Tue, 28 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/knowrob/</guid>
+      <description>&lt;p&gt;KnowRob is a knowledge processing system designed for robots. Its purpose is to equip robots with the capability to organize information in re-usable knowledge chunks, and to perform reasoning in an expressive logic. It further provides a set of tools for visualization and acquisition of knowledge.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;!-- &lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt; --&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/knowrob/knowrob&#34;&gt;Source Code&lt;/a&gt;
 &lt;/div&gt;</description>
     </item>
     
@@ -307,6 +635,20 @@
     
     <item>
       <title>Giskard</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/giskard/</link>
+      <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/giskard/</guid>
+      <description>&lt;p&gt;Giskard is an open source motion planning and control framework, which uses constraint and optimization based task space control to generate trajectories for the whole body of mobile manipulators.
+It offers easy to use Python and ROS interfaces that facilitate the specification of constraints for the underlying optimization problem, which is solved for the instantaneous joint velocities of the robot.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;!-- &lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt; --&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/SemRoCo/giskardpy&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Giskard</title>
       <link>https://intel4coro.github.io/ViB-public/posts/giskard/</link>
       <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
@@ -316,6 +658,25 @@ It offers easy to use Python and ROS interfaces that facilitate the specificatio
 &lt;div class=&#34;hidde-after-preview&#34;&gt;
 &lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt;
 &lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/SemRoCo/giskardpy&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>URoboSim</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/urobosim/</link>
+      <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/urobosim/</guid>
+      <description>&lt;p&gt;URoboSim is an Unreal Engine 4/5 plugin that allows importing robots
+to Unreal Engine using the URDF/SDF format and control them using a ROS interface.&lt;/p&gt;
+&lt;p&gt;You can
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34;
+href=&#34;https://github.com/urobosim/DemoProject&#34;&gt;&lt;b&gt;try out
+an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; disabled target=&#34;_blank&#34;&gt;Run Simulation&lt;/a&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2Fnotebooks%2FFoodCuttingQueries.ipynb&#34;&gt;Inspect Knowledge Graph&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/urobosim/URoboSim&#34;&gt;Source Code&lt;/a&gt;
 &lt;/div&gt;</description>
     </item>
     
@@ -340,6 +701,19 @@ an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
     
     <item>
       <title>Joint Probability Trees</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/joint-probability-trees/</link>
+      <pubDate>Sun, 02 Jul 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/joint-probability-trees/</guid>
+      <description>&lt;p&gt;Joint Probability Trees (short JPTs) are a formalism for learning of and reasoning about joint probability distributions, which is tractable for practical applications. JPTs support both symbolic and subsymbolic variables in a single hybrid model, and they do not rely on prior knowledge about variable dependencies or families of distributions.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/MrSkooma/jpt-gui/jupiter-branch?urlpath=notebooks%2Fsrc%2Fjpt_gui%2Fapp.ipynb%3Fautorun%3Dtrue&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/joint-probability-trees/&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Joint Probability Trees</title>
       <link>https://intel4coro.github.io/ViB-public/posts/joint-probability-trees/</link>
       <pubDate>Sun, 02 Jul 2023 14:33:42 -0400</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
@@ -353,6 +727,293 @@ an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
     
     <item>
       <title>Innovator&#39;s Workbench for Retail Robotics</title>
+      <link>https://intel4coro.github.io/ViB-public/page/labs/innovators-workbench-for-retail-robotics/</link>
+      <pubDate>Fri, 02 Jun 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/labs/innovators-workbench-for-retail-robotics/</guid>
+      <description>&lt;p&gt;Robot Agents that work in a retail store.&lt;/p&gt;
+&lt;param class=&#34;hidde-after-preview&#34;&gt;
+
+
+
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170764070717&#34;&gt;
+  
+  &lt;div class=&#34;row&#34;&gt;
+
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in envs&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt; 
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in robos&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt; 
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div v-if=&#34;taskes&#34;&gt;
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in taskes&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt; 
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div v-show=&#34;errorMsgs.length !== 0&#34;&gt;
+    &lt;pre class=&#34;alert alert-warning&#34; v-text=&#34;errorMsgs&#34;&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;action-buttons&#34;&gt;
+    &lt;div class=&#34;action-button-wrapper&#34; v-for=&#34;action in actions&#34; :class=&#34;{ &#39;disabled-action-button-wrapper&#39;: !getActionUrl(action) }&#34;&gt;
+      &lt;a class=&#34;btn mr-2 mb-2&#34; target=&#34;_blank&#34; v-text=&#34;action.name&#34; :title=&#34;action.description&#34;
+        :href=&#34;getActionUrl(action)&#34;
+        :class=&#34;{ &#39;btn-primary&#39;: action.primary,&#39;btn-success&#39;: !action.primary, &#39;disabled&#39;: !getActionUrl(action) }&#34;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&#34;module&#34;&gt;
+
+  function isAbsoluteUrl(url) {
+    return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url) || /^data:/i.test(url);
+  }
+  const { createApp, ref } = Vue;
+  const data = JSON.parse(&#34;{\n  \&#34;options\&#34;: {\n    \&#34;environments\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;Retail\&#34;,\n        \&#34;value\&#34;: \&#34;retail\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/retail.png\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Waterfront DM Store\&#34;,\n        \&#34;value\&#34;: \&#34;water_front\&#34;\n      }\n    ],\n    \&#34;robots\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;PR2\&#34;,\n        \&#34;value\&#34;: \&#34;pr2\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/pr2_urdf_white1.png\&#34;,\n        \&#34;knowledge_bases\&#34;: \&#34;https://data.open-ease.org/QA?q=findall%28%5BDuration%2C%20Evt%5D%2C%0A%20%20%28%20%20event_interval%28Evt%2C%20Begin%2C%20End%29%2C%0A%20%20%20%20%20number%28End%29%2C%0A%20%20%20%20%20Duration%20is%20End%20-%20Begin%0A%20%20%29%2C%0A%20%20Durations%29%2C%0Amax_member%28%5BMaxDuration%2C%20LongestEvt%5D%2C%20Durations%29.\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Pepper\&#34;,\n        \&#34;value\&#34;: \&#34;pepper\&#34;\n      },\n      {\n        \&#34;name\&#34;: \&#34;Donbot\&#34;,\n        \&#34;value\&#34;: \&#34;donbot\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/donbot_urdf_white1.png\&#34;\n      }\n    ]\n  },\n  \&#34;actions\&#34;: [\n    {\n      \&#34;name\&#34;: \&#34;Run Code\&#34;,\n      \&#34;value\&#34;: \&#34;run\&#34;,\n      \&#34;primary\&#34;: true,\n      \&#34;description\&#34;: \&#34;Run code on Binderhub.\&#34;,\n      \&#34;url\&#34;: \&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/COAI/master?urlpath=lab%2Ftree%2Fnotebooks%2F\&#34;,\n      \&#34;options\&#34;: [\n        \&#34;environments\&#34;,\n        \&#34;robots\&#34;\n      ],\n      \&#34;available\&#34;: {\n        \&#34;environments=retail|robots=donbot\&#34;: \&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/cram_teaching/legacy?urlpath=lab%2Ftree%2Flectures%2Fdemos%2Fretail.ipynb%3Frobot%3Ddonbot%26environment%3Dretail\&#34;,\n        \&#34;environments=retail|robots=pr2\&#34;: \&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/cram_teaching/legacy?urlpath=lab%2Ftree%2Flectures%2Fdemos%2Fretail.ipynb%3Frobot%3Dpr2%26environment%3Dretail\&#34;\n      }\n    },\n    {\n      \&#34;name\&#34;: \&#34;Experimental Data\&#34;,\n      \&#34;value\&#34;: \&#34;openease\&#34;\n    },\n    {\n      \&#34;name\&#34;: \&#34;Source Code\&#34;,\n      \&#34;value\&#34;: \&#34;source\&#34;,\n      \&#34;description\&#34;: \&#34;View source code on Github.\&#34;,\n      \&#34;url\&#34;: \&#34;https://github.com/IntEL4CoRo/COAI/blob/master/notebooks/\&#34;\n    },\n    {\n      \&#34;name\&#34;: \&#34;Assets\&#34;,\n      \&#34;value\&#34;: \&#34;assets\&#34;\n    }\n  ]\n}\n&#34;)
+  const App = {
+    data() {
+      return {
+        actions: data.actions,
+        selectOptions: Object.keys(data.options).map(v =&gt; {
+          return {
+            name: v,
+            noImg: data.options[v].map(v =&gt; !!v.img).filter(v =&gt; v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+          }
+        }),
+        updatedOptions: Object.keys(data.options).map(v =&gt; {
+          return {
+            name: v,
+            noImg: data.options[v].map(v =&gt; !!v.img).filter(v =&gt; v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+
+          }
+        })
+      };
+    },
+    computed: {
+      selectedNotebookId() {
+        const newValue = this.selectOptions
+          ? this.selectOptions.map(v =&gt; v.name + &#39;=&#39; + v.selected.value).join(&#39;|&#39;)
+          : &#39;&#39;
+        return newValue
+      },
+      selectedNotebookIdUpdated() {
+        const newValue = this.selectOptions
+          ? this.updatedOptions.map(v =&gt; v.name + &#39;=&#39; + v.selected.value).join(&#39;|&#39;)
+          : &#39;&#39;
+        return newValue
+      },
+      errorMsgs() {
+        let _arr = this.actions
+          .filter(act =&gt; !this.getActionUrl(act))
+          .map(act =&gt; `&#34;${act.name}&#34;`)
+        let selectionStr = this.selectedNotebookId
+          ? ` for options: \n\n${this.selectedNotebookId.replace(/\|/g, &#39;\n&#39;)}`
+          : &#39;!&#39;
+        return _arr.length === 0 ? &#39;&#39; : `${_arr.join(&#39;,&#39;)} is currently unavailable${selectionStr}`
+      },
+      envs() {
+        this.filterOptions()
+        return this.updatedOptions.length &gt; 0 ? [this.updatedOptions[0]] : [];
+        
+      },
+      robos() {
+        const selectedEnvironment = this.updatedOptions[0].selected.value;
+        this.filterOptions(selectedEnvironment)
+        return this.updatedOptions.length &gt; 1 ? [this.updatedOptions[1]] : [];
+        
+      },
+      taskes() {
+        if (this.selectOptions.length &gt; 2){
+          const selectedEnvironment = this.updatedOptions[0].selected.value;
+          const selectedRobot = this.updatedOptions[1].selected.value;
+          this.filterOptions(selectedEnvironment,selectedRobot)
+          return this.updatedOptions.length &gt; 2 ? [this.updatedOptions[2]] : [];
+        }
+        return this.selectOptions.length &gt; 2 ? [this.selectOptions[2]] : null;
+      }
+    },
+    methods: {
+      getActionUrl(action) {
+        if (!action.url) return &#39;&#39;
+        let _url = action.url
+        if (action.options &amp;&amp; action.available) {
+          let _notebookUrl = action.available[this.selectedNotebookIdUpdated]
+          if (!_notebookUrl) return &#39;&#39;
+          if (isAbsoluteUrl(_notebookUrl)) return _notebookUrl
+          _url += _notebookUrl
+        }
+        return _url
+      },
+      filterOptions(selectedEnv = &#39;&#39;,selectedRobo = &#39;&#39;){
+        const availableConfigs = this.actions[0].available;
+        if (availableConfigs !== null){
+          const OptionSet = new Set();
+          let OptionList = []
+          let regex = &#39;&#39;;
+          let optionIndex = 1;
+
+          if (selectedEnv === &#39;&#39;) {
+              regex = new RegExp(`environments=([^|]+)`);
+              optionIndex = 0
+          }
+          else if (selectedRobo === &#39;&#39;){
+              regex = new RegExp(`environments=${selectedEnv}\\|robots=([^|]+)`);
+              optionIndex = 1
+          }
+          else {
+              regex = new RegExp(`environments=${selectedEnv}\\|robots=${selectedRobo}\\|tasks=([^|]+)`);
+              optionIndex = 2
+          }
+          
+          for (const key in availableConfigs) {
+              const match = regex.exec(key);
+              if (match) {
+              for (const ind in this.selectOptions[optionIndex].options){
+                  const dicts = this.selectOptions[optionIndex].options[ind]
+                  const name = dicts[&#39;name&#39;]
+                  if ((dicts[&#39;value&#39;] === match[1]) &amp;&amp; (!OptionSet.has(name)))
+                  {
+                  OptionSet.add(name);
+                  OptionList.push(dicts);
+                  }
+              }
+              }
+          }
+
+          
+          OptionList.sort(function(a,b){
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            if (nameA &lt; nameB){
+              return -1;
+            }
+            if (nameA &gt; nameB){
+              return 1;
+            }
+            return 0;
+          })
+
+          this.updatedOptions[optionIndex].options = []
+          this.updatedOptions[optionIndex].options = Array.from(OptionList)
+          this.updatedOptions[optionIndex].selected = this.updatedOptions[optionIndex].options[0]
+
+        }
+        
+      }
+    },
+    components: {
+      &#34;p-button&#34;: primevue.button,
+      &#34;p-overlaypanel&#34;: primevue.overlaypanel,
+      &#34;p-dropdown&#34;: primevue.dropdown
+    }
+  };
+
+  const app = createApp(App);
+  app.use(primevue.config.default);
+  app.mount(&#39;#vueapp1709052170764070717&#39;);
+&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Innovator&#39;s Workbench for Retail Robotics</title>
       <link>https://intel4coro.github.io/ViB-public/posts/innovators-workbench-for-retail-robotics/</link>
       <pubDate>Fri, 02 Jun 2023 14:33:42 -0400</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
@@ -362,7 +1023,7 @@ an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
 
 
 
-&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709039847791138520&#34;&gt;
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170764510980&#34;&gt;
   
   &lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in selectOptions&#34;&gt;
@@ -473,22 +1134,22 @@ an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
 
   const app = createApp(App);
   app.use(primevue.config.default);
-  app.mount(&#39;#vueapp1709039847791138520&#39;);
+  app.mount(&#39;#vueapp1709052170764510980&#39;);
 &lt;/script&gt;</description>
     </item>
     
     <item>
       <title>Innovator&#39;s Workbench for Laboratory Environment</title>
-      <link>https://intel4coro.github.io/ViB-public/posts/innovators-workbench-for-laboratory-environment/</link>
+      <link>https://intel4coro.github.io/ViB-public/page/comingsoon/innovators-workbench-for-laboratory-environment/</link>
       <pubDate>Tue, 02 May 2023 14:33:42 -0400</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
-      <guid>https://intel4coro.github.io/ViB-public/posts/innovators-workbench-for-laboratory-environment/</guid>
+      <guid>https://intel4coro.github.io/ViB-public/page/comingsoon/innovators-workbench-for-laboratory-environment/</guid>
       <description>&lt;p&gt;Robot Agents that assist in laboratories.&lt;/p&gt;
 &lt;param class=&#34;hidde-after-preview&#34;&gt;
 
 
 
-&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709039847791529840&#34;&gt;
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170764563199&#34;&gt;
   
   &lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in selectOptions&#34;&gt;
@@ -599,8 +1260,149 @@ an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
 
   const app = createApp(App);
   app.use(primevue.config.default);
-  app.mount(&#39;#vueapp1709039847791529840&#39;);
+  app.mount(&#39;#vueapp1709052170764563199&#39;);
 &lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Innovator&#39;s Workbench for Laboratory Environment</title>
+      <link>https://intel4coro.github.io/ViB-public/posts/innovators-workbench-for-laboratory-environment/</link>
+      <pubDate>Tue, 02 May 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/posts/innovators-workbench-for-laboratory-environment/</guid>
+      <description>&lt;p&gt;Robot Agents that assist in laboratories.&lt;/p&gt;
+&lt;param class=&#34;hidde-after-preview&#34;&gt;
+
+
+
+&lt;div class=&#34;vue-app&#34; id=&#34;vueapp1709052170729101410&#34;&gt;
+  
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;p-float-label col-md-6&#34; v-for=&#34;item in selectOptions&#34;&gt;
+      &lt;p-dropdown v-model=&#34;item.selected&#34; :options=&#34;item.options&#34; :optionLabel=&#34;item.name&#34; :placeholder=&#34;item.name&#34;
+        :inputId=&#34;item.name&#34; class=&#34;col-md-12 mb-3&#34;&gt;
+        &lt;template #value=&#34;slotProps&#34;&gt;
+          &lt;div v-if=&#34;slotProps.value&#34; :title=&#34;slotProps.value.value&#34; class=&#34;flex h-100 align-items-center&#34;
+            :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.value.img&#34; class=&#34;selected-img&#34; :alt=&#34;slotProps.value.name&#34;
+              :src=&#34;slotProps.value.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.value.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.value.knowledge_bases&#34; :href=&#34;slotProps.value.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;span v-else&gt;
+            &lt;span v-text=&#34;slotProps.placeholder&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/template&gt;
+        &lt;template #option=&#34;slotProps&#34;&gt;
+          &lt;div class=&#34;flex align-items-center&#34; :title=&#34;slotProps.option.value&#34; :class=&#34;{ noImg: item.noImg }&#34;&gt;
+            &lt;img v-if=&#34;slotProps.option.img&#34; class=&#34;option-img&#34; :alt=&#34;slotProps.option.name&#34;
+              :src=&#34;slotProps.option.img&#34; /&gt;
+            &lt;div class=&#34;image-missing&#34; v-else&gt;&lt;/div&gt;
+            &lt;div class=&#34;text-capitalize option-name&#34; v-text=&#34;slotProps.option.name&#34;&gt;&lt;/div&gt;
+            &lt;a class=&#34;text-xs&#34; target=&#34;_blank&#34; title=&#34;Knowledge Bases in OpenEASE&#34;
+              v-if=&#34;slotProps.option.knowledge_bases&#34; :href=&#34;slotProps.option.knowledge_bases&#34;
+              onclick=&#34;event.stopPropagation()&#34;&gt;Knowledge Bases&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/p-dropdown&gt;
+      &lt;label :for=&#34;item.name&#34; v-text=&#34;item.name&#34;&gt;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div v-show=&#34;errorMsgs.length !== 0&#34;&gt;
+    &lt;pre class=&#34;alert alert-warning&#34; v-text=&#34;errorMsgs&#34;&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;action-buttons&#34;&gt;
+    &lt;div class=&#34;action-button-wrapper&#34; v-for=&#34;action in actions&#34; :class=&#34;{ &#39;disabled-action-button-wrapper&#39;: !getActionUrl(action) }&#34;&gt;
+      &lt;a class=&#34;btn mr-2 mb-2&#34; target=&#34;_blank&#34; v-text=&#34;action.name&#34; :title=&#34;action.description&#34;
+        :href=&#34;getActionUrl(action)&#34;
+        :class=&#34;{ &#39;btn-primary&#39;: action.primary,&#39;btn-success&#39;: !action.primary, &#39;disabled&#39;: !getActionUrl(action) }&#34;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&#34;module&#34;&gt;
+
+  function isAbsoluteUrl(url) {
+    return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url) || /^data:/i.test(url);
+  }
+  const { createApp, ref } = Vue;
+  const data = JSON.parse(&#34;{\n  \&#34;options\&#34;: {\n    \&#34;environments\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;Laboratory Table\&#34;,\n        \&#34;value\&#34;: \&#34;lab_table\&#34;,\n        \&#34;img\&#34;: \&#34;https://iris.informatik.uni-bremen.de/textbook/content/medical_lab.png\&#34;\n      }\n    ],\n    \&#34;robots\&#34;: [\n      {\n        \&#34;name\&#34;: \&#34;Tracebot\&#34;,\n        \&#34;value\&#34;: \&#34;tracebot\&#34;,\n        \&#34;img\&#34;: \&#34;https://intel4coro.github.io/coai-vib/img/tracebot_urdf_white1.png\&#34;\n      }\n    ]\n  },\n  \&#34;actions\&#34;: [\n    {\n      \&#34;name\&#34;: \&#34;Run Code\&#34;,\n      \&#34;value\&#34;: \&#34;run\&#34;,\n      \&#34;primary\&#34;: true,\n      \&#34;url\&#34;: \&#34;\&#34;,\n      \&#34;options\&#34;: [\n        \&#34;environments\&#34;,\n        \&#34;robots\&#34;\n      ],\n      \&#34;available\&#34;: null\n    },\n    {\n      \&#34;name\&#34;: \&#34;Experimental Data\&#34;,\n      \&#34;value\&#34;: \&#34;openease\&#34;,\n      \&#34;url\&#34;: \&#34;\&#34;\n    },\n    {\n      \&#34;name\&#34;: \&#34;Source Code\&#34;,\n      \&#34;value\&#34;: \&#34;source\&#34;,\n      \&#34;url\&#34;: \&#34;\&#34;\n    },\n    {\n      \&#34;name\&#34;: \&#34;Assets\&#34;,\n      \&#34;value\&#34;: \&#34;assets\&#34;,\n      \&#34;url\&#34;: \&#34;\&#34;\n    }\n  ]\n}\n&#34;)
+  const App = {
+    data() {
+      return {
+        actions: data.actions,
+        selectOptions: Object.keys(data.options).map(v =&gt; {
+          return {
+            name: v,
+            noImg: data.options[v].map(v =&gt; !!v.img).filter(v =&gt; v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+          }
+        })
+      };
+    },
+    computed: {
+      selectedNotebookId() {
+        const newValue = this.selectOptions
+          ? this.selectOptions.map(v =&gt; v.name + &#39;=&#39; + v.selected.value).join(&#39;|&#39;)
+          : &#39;&#39;
+        return newValue
+      },
+      errorMsgs() {
+        let _arr = this.actions
+          .filter(act =&gt; !this.getActionUrl(act))
+          .map(act =&gt; `&#34;${act.name}&#34;`)
+        let selectionStr = this.selectedNotebookId
+          ? ` for options: \n\n${this.selectedNotebookId.replace(/\|/g, &#39;\n&#39;)}`
+          : &#39;!&#39;
+        return _arr.length === 0 ? &#39;&#39; : `${_arr.join(&#39;,&#39;)} is currently unavailable${selectionStr}`
+      }
+    },
+    methods: {
+      getActionUrl(action) {
+        if (!action.url) return &#39;&#39;
+        let _url = action.url
+        if (action.options &amp;&amp; action.available) {
+          let _notebookUrl = action.available[this.selectedNotebookId]
+          if (!_notebookUrl) return &#39;&#39;
+          if (isAbsoluteUrl(_notebookUrl)) return _notebookUrl
+          _url += _notebookUrl
+        }
+        return _url
+      }
+    },
+    components: {
+      &#34;p-button&#34;: primevue.button,
+      &#34;p-overlaypanel&#34;: primevue.overlaypanel,
+      &#34;p-dropdown&#34;: primevue.dropdown
+    }
+  };
+
+  const app = createApp(App);
+  app.use(primevue.config.default);
+  app.mount(&#39;#vueapp1709052170729101410&#39;);
+&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Competitor&#39;s Arena</title>
+      <link>https://intel4coro.github.io/ViB-public/page/comingsoon/competitors-arena/</link>
+      <pubDate>Sun, 02 Apr 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/comingsoon/competitors-arena/</guid>
+      <description>&lt;p&gt;RoboCup is an annual international robotics competition with the aim to promote robotics and AI research by offering a publicly appealing challenge.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; disabled target=&#34;_blank&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; disabled target=&#34;_blank&#34;&gt;Experimental Data&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; disabled target=&#34;_blank&#34;&gt;Source Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; disabled target=&#34;_blank&#34;&gt;Assets&lt;/a&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -633,6 +1435,20 @@ an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
     
     <item>
       <title>PyCRAM</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/pycram/</link>
+      <pubDate>Thu, 02 Feb 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/pycram/</guid>
+      <description>&lt;p&gt;PyCRAM is the Python 3 re-implementation of &lt;a href=&#34;https://cram-system.org/&#34;&gt;CRAM&lt;/a&gt;.
+It is a toolbox for designing, implementing and deploying software on autonomous robots.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/pycram/binder-xpra?urlpath=lab%2Ftree%2Fexamples%2Faction_designator.ipynb%3Frobot%3Dpr2%26environment%3Dkitchen&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/cram2/pycram&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyCRAM</title>
       <link>https://intel4coro.github.io/ViB-public/posts/pycram/</link>
       <pubDate>Thu, 02 Feb 2023 14:33:42 -0400</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
@@ -646,11 +1462,122 @@ It is a toolbox for designing, implementing and deploying software on autonomous
     </item>
     
     <item>
+      <title>Photoswipe Gallery Sample</title>
+      <link>https://intel4coro.github.io/ViB-public/examples/2017-03-20-photoswipe-gallery-sample/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/examples/2017-03-20-photoswipe-gallery-sample/</guid>
+      <description>&lt;p&gt;Beautiful Hugo adds a few custom shortcodes created by &lt;a href=&#34;https://www.liwen.id.au/heg/&#34;&gt;Li-Wen Yip&lt;/a&gt; and &lt;a href=&#34;https://github.com/GjjvdBurg/HugoPhotoSwipe&#34;&gt;Gert-Jan van den Berg&lt;/a&gt; for making galleries with &lt;a href=&#34;https://photoswipe.com&#34;&gt;PhotoSwipe&lt;/a&gt; .&lt;/p&gt;
+
+
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+	  
+  
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://intel4coro.github.io/ViB-public/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://intel4coro.github.io/ViB-public//img/hexagon-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://intel4coro.github.io/ViB-public/img/hexagon-thumb.jpg&#34; alt=&#34;/img/hexagon-thumb.jpg&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://intel4coro.github.io/ViB-public/img/hexagon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://intel4coro.github.io/ViB-public//img/sphere-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://intel4coro.github.io/ViB-public/img/sphere-thumb.jpg&#34; alt=&#34;Sphere&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://intel4coro.github.io/ViB-public/img/sphere.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Sphere&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://intel4coro.github.io/ViB-public//img/triangle-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://intel4coro.github.io/ViB-public/img/triangle-thumb.jpg&#34; alt=&#34;This is a long comment about a triangle&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://intel4coro.github.io/ViB-public/img/triangle.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Triangle&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Big Image Sample</title>
+      <link>https://intel4coro.github.io/ViB-public/examples/2017-03-07-bigimg-sample/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/examples/2017-03-07-bigimg-sample/</guid>
+      <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Sample</title>
+      <link>https://intel4coro.github.io/ViB-public/examples/2017-03-05-math-sample/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/examples/2017-03-05-math-sample/</guid>
+      <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
+&lt;p&gt;$$
+\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots
+$$&lt;/p&gt;
+&lt;p&gt;Additional details can be found on &lt;a href=&#34;https://github.com/KaTeX/KaTeX&#34;&gt;GitHub&lt;/a&gt; or on the &lt;a href=&#34;https://katex.org/&#34;&gt;project homepage&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Code Sample</title>
+      <link>https://intel4coro.github.io/ViB-public/examples/2016-03-08-code-sample/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/examples/2016-03-08-code-sample/</guid>
+      <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test markdown</title>
+      <link>https://intel4coro.github.io/ViB-public/examples/2015-02-20-test-markdown/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/examples/2015-02-20-test-markdown/</guid>
+      <description>You can write regular markdown here and Hugo will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
+Here is some bold text
+Here is a secondary heading Here&amp;rsquo;s a useless table:
+   Number Next number Previous number     Five Six Four   Ten Eleven Nine   Seven Eight Six   Two Three One    How about a yummy crepe?</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://intel4coro.github.io/ViB-public/page/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
       <guid>https://intel4coro.github.io/ViB-public/page/contact/</guid>
+      <description>Please contact us for further information about our innovative Virtual Research and Training Building (ViB) on cognition-enabled robotics and AI.
+e-mail: ai-office@cs.uni-bremen.de
+University of BremenInstitute for Artificial IntelligenceAm Fallturm 128359 BremenGermany
+Tel.: +49 421 218 64000Fax: +49 421 218 64047
+     </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://intel4coro.github.io/ViB-public/page/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/contact/contact/</guid>
       <description>Please contact us for further information about our innovative Virtual Research and Training Building (ViB) on cognition-enabled robotics and AI.
 e-mail: ai-office@cs.uni-bremen.de
 University of BremenInstitute for Artificial IntelligenceAm Fallturm 128359 BremenGermany

@@ -7,6 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ai-office@cs.uni-bremen.de </managingEditor>
     <webMaster>ai-office@cs.uni-bremen.de </webMaster>
+    <lastBuildDate>Fri, 01 Dec 2023 10:35:35 -0500</lastBuildDate>
     
 	<atom:link href="https://intel4coro.github.io/ViB-public/page/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +18,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>ai-office@cs.uni-bremen.de </author>
       <guid>https://intel4coro.github.io/ViB-public/page/contact/</guid>
+      <description>Please contact us for further information about our innovative Virtual Research and Training Building (ViB) on cognition-enabled robotics and AI.
+e-mail: ai-office@cs.uni-bremen.de
+University of BremenInstitute for Artificial IntelligenceAm Fallturm 128359 BremenGermany
+Tel.: +49 421 218 64000Fax: +49 421 218 64047
+     </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://intel4coro.github.io/ViB-public/page/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/contact/contact/</guid>
       <description>Please contact us for further information about our innovative Virtual Research and Training Building (ViB) on cognition-enabled robotics and AI.
 e-mail: ai-office@cs.uni-bremen.de
 University of BremenInstitute for Artificial IntelligenceAm Fallturm 128359 BremenGermany

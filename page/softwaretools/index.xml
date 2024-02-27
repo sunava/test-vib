@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtual Research Building (ViB)</title>
+    <link>https://intel4coro.github.io/ViB-public/page/softwaretools/</link>
+    <description>Recent content on Virtual Research Building (ViB)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>ai-office@cs.uni-bremen.de </managingEditor>
+    <webMaster>ai-office@cs.uni-bremen.de </webMaster>
+    <lastBuildDate>Tue, 28 Nov 2023 10:35:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://intel4coro.github.io/ViB-public/page/softwaretools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KnowRob</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/knowrob/</link>
+      <pubDate>Tue, 28 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/knowrob/</guid>
+      <description>&lt;p&gt;KnowRob is a knowledge processing system designed for robots. Its purpose is to equip robots with the capability to organize information in re-usable knowledge chunks, and to perform reasoning in an expressive logic. It further provides a set of tools for visualization and acquisition of knowledge.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;!-- &lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt; --&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/knowrob/knowrob&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Giskard</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/giskard/</link>
+      <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/giskard/</guid>
+      <description>&lt;p&gt;Giskard is an open source motion planning and control framework, which uses constraint and optimization based task space control to generate trajectories for the whole body of mobile manipulators.
+It offers easy to use Python and ROS interfaces that facilitate the specification of constraints for the underlying optimization problem, which is solved for the instantaneous joint velocities of the robot.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;!-- &lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt; --&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/SemRoCo/giskardpy&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>URoboSim</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/urobosim/</link>
+      <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/urobosim/</guid>
+      <description>&lt;p&gt;URoboSim is an Unreal Engine 4/5 plugin that allows importing robots
+to Unreal Engine using the URDF/SDF format and control them using a ROS interface.&lt;/p&gt;
+&lt;p&gt;You can
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34;
+href=&#34;https://github.com/urobosim/DemoProject&#34;&gt;&lt;b&gt;try out
+an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; disabled target=&#34;_blank&#34;&gt;Run Simulation&lt;/a&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2Fnotebooks%2FFoodCuttingQueries.ipynb&#34;&gt;Inspect Knowledge Graph&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/urobosim/URoboSim&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Joint Probability Trees</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/joint-probability-trees/</link>
+      <pubDate>Sun, 02 Jul 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/joint-probability-trees/</guid>
+      <description>&lt;p&gt;Joint Probability Trees (short JPTs) are a formalism for learning of and reasoning about joint probability distributions, which is tractable for practical applications. JPTs support both symbolic and subsymbolic variables in a single hybrid model, and they do not rely on prior knowledge about variable dependencies or families of distributions.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/MrSkooma/jpt-gui/jupiter-branch?urlpath=notebooks%2Fsrc%2Fjpt_gui%2Fapp.ipynb%3Fautorun%3Dtrue&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/joint-probability-trees/&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyCRAM</title>
+      <link>https://intel4coro.github.io/ViB-public/page/softwaretools/pycram/</link>
+      <pubDate>Thu, 02 Feb 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/page/softwaretools/pycram/</guid>
+      <description>&lt;p&gt;PyCRAM is the Python 3 re-implementation of &lt;a href=&#34;https://cram-system.org/&#34;&gt;CRAM&lt;/a&gt;.
+It is a toolbox for designing, implementing and deploying software on autonomous robots.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/pycram/binder-xpra?urlpath=lab%2Ftree%2Fexamples%2Faction_designator.ipynb%3Frobot%3Dpr2%26environment%3Dkitchen&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/cram2/pycram&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
