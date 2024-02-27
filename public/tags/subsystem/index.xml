@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subsystem on Virtual Research Building (ViB)</title>
+    <link>https://intel4coro.github.io/ViB-public/tags/subsystem/</link>
+    <description>Recent content in Subsystem on Virtual Research Building (ViB)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>ai-office@cs.uni-bremen.de </managingEditor>
+    <webMaster>ai-office@cs.uni-bremen.de </webMaster>
+    <lastBuildDate>Tue, 28 Nov 2023 10:35:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://intel4coro.github.io/ViB-public/tags/subsystem/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KnowRob</title>
+      <link>https://intel4coro.github.io/ViB-public/posts/knowrob/</link>
+      <pubDate>Tue, 28 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/posts/knowrob/</guid>
+      <description>&lt;p&gt;KnowRob is a knowledge processing system designed for robots. Its purpose is to equip robots with the capability to organize information in re-usable knowledge chunks, and to perform reasoning in an expressive logic. It further provides a set of tools for visualization and acquisition of knowledge.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/knowrob/knowrob&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Giskard</title>
+      <link>https://intel4coro.github.io/ViB-public/posts/giskard/</link>
+      <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/posts/giskard/</guid>
+      <description>&lt;p&gt;Giskard is an open source motion planning and control framework, which uses constraint and optimization based task space control to generate trajectories for the whole body of mobile manipulators.
+It offers easy to use Python and ROS interfaces that facilitate the specification of constraints for the underlying optimization problem, which is solved for the instantaneous joint velocities of the robot.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/SemRoCo/giskardpy&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>RoboKudo</title>
+      <link>https://intel4coro.github.io/ViB-public/posts/robokudo/</link>
+      <pubDate>Thu, 02 Mar 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/posts/robokudo/</guid>
+      <description>&lt;p&gt;RoboKudo is a perception framework targeted for robot manipulation tasks. It is a multi-expert approach to analyze unstructured sensor data and annotate particular regions of the data given the expertise of specific computer vision algorithms.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/git/https%3A%2F%2Fgitlab.informatik.uni-bremen.de%2Fyanxiang%2Frobokudo.git/binderhub&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://gitlab.informatik.uni-bremen.de/robokudo/robokudo&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyCRAM</title>
+      <link>https://intel4coro.github.io/ViB-public/posts/pycram/</link>
+      <pubDate>Thu, 02 Feb 2023 14:33:42 -0400</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/posts/pycram/</guid>
+      <description>&lt;p&gt;PyCRAM is the Python 3 re-implementation of &lt;a href=&#34;https://cram-system.org/&#34;&gt;CRAM&lt;/a&gt;.
+It is a toolbox for designing, implementing and deploying software on autonomous robots.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/IntEL4CoRo/pycram/binder-xpra?urlpath=lab%2Ftree%2Fexamples%2Faction_designator.ipynb%3Frobot%3Dpr2%26environment%3Dkitchen&#34;&gt;Run Code&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/cram2/pycram&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research, Unreal Engine on Virtual Research Building (ViB)</title>
+    <link>https://intel4coro.github.io/ViB-public/tags/research-unreal-engine/</link>
+    <description>Recent content in Research, Unreal Engine on Virtual Research Building (ViB)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>ai-office@cs.uni-bremen.de </managingEditor>
+    <webMaster>ai-office@cs.uni-bremen.de </webMaster>
+    <lastBuildDate>Fri, 03 Nov 2023 10:35:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://intel4coro.github.io/ViB-public/tags/research-unreal-engine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>URoboSim</title>
+      <link>https://intel4coro.github.io/ViB-public/posts/urobosim/</link>
+      <pubDate>Fri, 03 Nov 2023 10:35:35 -0500</pubDate>
+      <author>ai-office@cs.uni-bremen.de </author>
+      <guid>https://intel4coro.github.io/ViB-public/posts/urobosim/</guid>
+      <description>&lt;p&gt;URoboSim is an Unreal Engine 4/5 plugin that allows importing robots
+to Unreal Engine using the URDF/SDF format and control them using a ROS interface.&lt;/p&gt;
+&lt;p&gt;You can
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34;
+href=&#34;https://github.com/urobosim/DemoProject&#34;&gt;&lt;b&gt;try out
+an example project &lt;/b&gt;&lt;/a&gt; here.&lt;/p&gt;
+&lt;div class=&#34;hidde-after-preview&#34;&gt;
+&lt;a class=&#34;btn btn-primary&#34; disabled target=&#34;_blank&#34;&gt;Run Simulation&lt;/a&gt;
+&lt;a class=&#34;btn btn-primary&#34; target=&#34;_blank&#34; href=&#34;https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2Fnotebooks%2FFoodCuttingQueries.ipynb&#34;&gt;Inspect Knowledge Graph&lt;/a&gt;
+&lt;a class=&#34;btn btn-success&#34; target=&#34;_blank&#34; href=&#34;https://github.com/urobosim/URoboSim&#34;&gt;Source Code&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
