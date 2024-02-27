@@ -149,20 +149,72 @@
 
       <div class="flex-item-left">
         <div class="sidebar-image-container">
-          <img class="sidebar-image-sticky" src="https://intel4coro.github.io/ViB-public/img/Wimmelbild_clean%20short.png" width="100%" height="1200px">
+          <img class="sidebar-image-sticky" src="https://intel4coro.github.io/ViB-public/img/Wimmelbild_clean%20short.png" width="1000px" height="1000px">
         </div>
       </div>
 
       <div class="flex-item-center">
+        <div style="margin: 0; flex-base: 80vw;">
+                      
+            
 
-        
 
-          
-            
-          
-            
-            
-            <img src="img/ViB_banner_Uni_Rot.png" width="80%" style="margin-top: 50px; padding: 15px;">
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  <div class="intro-header"></div>
+
 
             
   <div class="container" role="main">
@@ -195,7 +247,7 @@
 
 
 
-<div class="vue-app" id="vueapp1709052170765168574">
+<div class="vue-app" id="vueapp1709061070978605680">
   
   <div class="row">
 
@@ -467,7 +519,312 @@
 
   const app = createApp(App);
   app.use(primevue.config.default);
-  app.mount('#vueapp1709052170765168574');
+  app.mount('#vueapp1709061070978605680');
+</script>
+        
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://intel4coro.github.io/ViB-public//tags/research/">Research</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+
+          
+            <article class="post-preview">
+    <a href="https://intel4coro.github.io/ViB-public/page/labs/food-cutting-robots/">
+        <h2 class="post-title">Food Cutting Robots</h2>
+        
+        
+        
+    </a>
+
+
+    <div class="post-entry">
+        
+        <p>In this research lab you can join our research activity targeting robots learning abstract knowledge into comprehensive knowledge graphs, and making the knowledge &ldquo;activable&rdquo; in robot agents.</p>
+<param class="hidde-after-preview">
+
+
+
+<div class="vue-app" id="vueapp1709061070928507916">
+  
+  <div class="row">
+
+    <div class="p-float-label col-md-6" v-for="item in envs">
+      <p-dropdown v-model="item.selected" :options="item.options" :optionLabel="item.name" :placeholder="item.name"
+        :inputId="item.name" class="col-md-12 mb-3"> 
+        <template #value="slotProps">
+          <div v-if="slotProps.value" :title="slotProps.value.value" class="flex h-100 align-items-center"
+            :class="{ noImg: item.noImg }">
+            <img v-if="slotProps.value.img" class="selected-img" :alt="slotProps.value.name"
+              :src="slotProps.value.img" />
+            <div class="image-missing" v-else></div>
+            <div class="text-capitalize option-name" v-text="slotProps.value.name"></div>
+            <a class="text-xs" target="_blank" title="Knowledge Bases in OpenEASE"
+              v-if="slotProps.value.knowledge_bases" :href="slotProps.value.knowledge_bases"
+              onclick="event.stopPropagation()">Knowledge Bases</a>
+          </div>
+          <span v-else>
+            <span v-text="slotProps.placeholder"></span>
+          </span>
+        </template>
+        <template #option="slotProps">
+          <div class="flex align-items-center" :title="slotProps.option.value" :class="{ noImg: item.noImg }">
+            <img v-if="slotProps.option.img" class="option-img" :alt="slotProps.option.name"
+              :src="slotProps.option.img" />
+            <div class="image-missing" v-else></div>
+            <div class="text-capitalize option-name" v-text="slotProps.option.name"></div>
+            <a class="text-xs" target="_blank" title="Knowledge Bases in OpenEASE"
+              v-if="slotProps.option.knowledge_bases" :href="slotProps.option.knowledge_bases"
+              onclick="event.stopPropagation()">Knowledge Bases</a>
+          </div>
+        </template>
+      </p-dropdown>
+      <label :for="item.name" v-text="item.name"></label>
+    </div>
+
+    <div class="p-float-label col-md-6" v-for="item in robos">
+      <p-dropdown v-model="item.selected" :options="item.options" :optionLabel="item.name" :placeholder="item.name"
+        :inputId="item.name" class="col-md-12 mb-3"> 
+        <template #value="slotProps">
+          <div v-if="slotProps.value" :title="slotProps.value.value" class="flex h-100 align-items-center"
+            :class="{ noImg: item.noImg }">
+            <img v-if="slotProps.value.img" class="selected-img" :alt="slotProps.value.name"
+              :src="slotProps.value.img" />
+            <div class="image-missing" v-else></div>
+            <div class="text-capitalize option-name" v-text="slotProps.value.name"></div>
+            <a class="text-xs" target="_blank" title="Knowledge Bases in OpenEASE"
+              v-if="slotProps.value.knowledge_bases" :href="slotProps.value.knowledge_bases"
+              onclick="event.stopPropagation()">Knowledge Bases</a>
+          </div>
+          <span v-else>
+            <span v-text="slotProps.placeholder"></span>
+          </span>
+        </template>
+        <template #option="slotProps">
+          <div class="flex align-items-center" :title="slotProps.option.value" :class="{ noImg: item.noImg }">
+            <img v-if="slotProps.option.img" class="option-img" :alt="slotProps.option.name"
+              :src="slotProps.option.img" />
+            <div class="image-missing" v-else></div>
+            <div class="text-capitalize option-name" v-text="slotProps.option.name"></div>
+            <a class="text-xs" target="_blank" title="Knowledge Bases in OpenEASE"
+              v-if="slotProps.option.knowledge_bases" :href="slotProps.option.knowledge_bases"
+              onclick="event.stopPropagation()">Knowledge Bases</a>
+          </div>
+        </template>
+      </p-dropdown>
+      <label :for="item.name" v-text="item.name"></label>
+    </div>
+
+    <div v-if="taskes">
+    <div class="p-float-label col-md-6" v-for="item in taskes">
+      <p-dropdown v-model="item.selected" :options="item.options" :optionLabel="item.name" :placeholder="item.name"
+        :inputId="item.name" class="col-md-12 mb-3"> 
+        <template #value="slotProps">
+          <div v-if="slotProps.value" :title="slotProps.value.value" class="flex h-100 align-items-center"
+            :class="{ noImg: item.noImg }">
+            <img v-if="slotProps.value.img" class="selected-img" :alt="slotProps.value.name"
+              :src="slotProps.value.img" />
+            <div class="image-missing" v-else></div>
+            <div class="text-capitalize option-name" v-text="slotProps.value.name"></div>
+            <a class="text-xs" target="_blank" title="Knowledge Bases in OpenEASE"
+              v-if="slotProps.value.knowledge_bases" :href="slotProps.value.knowledge_bases"
+              onclick="event.stopPropagation()">Knowledge Bases</a>
+          </div>
+          <span v-else>
+            <span v-text="slotProps.placeholder"></span>
+          </span>
+        </template>
+        <template #option="slotProps">
+          <div class="flex align-items-center" :title="slotProps.option.value" :class="{ noImg: item.noImg }">
+            <img v-if="slotProps.option.img" class="option-img" :alt="slotProps.option.name"
+              :src="slotProps.option.img" />
+            <div class="image-missing" v-else></div>
+            <div class="text-capitalize option-name" v-text="slotProps.option.name"></div>
+            <a class="text-xs" target="_blank" title="Knowledge Bases in OpenEASE"
+              v-if="slotProps.option.knowledge_bases" :href="slotProps.option.knowledge_bases"
+              onclick="event.stopPropagation()">Knowledge Bases</a>
+          </div>
+        </template>
+      </p-dropdown>
+      <label :for="item.name" v-text="item.name"></label>
+    </div>
+    </div>
+
+  </div>
+  
+  <div v-show="errorMsgs.length !== 0">
+    <pre class="alert alert-warning" v-text="errorMsgs"></pre>
+  </div>
+
+  
+  <div class="action-buttons">
+    <div class="action-button-wrapper" v-for="action in actions" :class="{ 'disabled-action-button-wrapper': !getActionUrl(action) }">
+      <a class="btn mr-2 mb-2" target="_blank" v-text="action.name" :title="action.description"
+        :href="getActionUrl(action)"
+        :class="{ 'btn-primary': action.primary,'btn-success': !action.primary, 'disabled': !getActionUrl(action) }"></a>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+
+  function isAbsoluteUrl(url) {
+    return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url) || /^data:/i.test(url);
+  }
+  const { createApp, ref } = Vue;
+  const data = JSON.parse("{\n  \"options\": {\n    \"environments\": [\n      {\n        \"name\": \"Kitchen\",\n        \"value\": \"kitchen\",\n        \"img\": \"https://intel4coro.github.io/coai-vib/img/household.png\",\n        \"knowledge_bases\": \"https://data.open-ease.org/QA?neem_id=64ccc8bc24cdd341ebdb2aa3\u0026q=findall([Duration%2C Evt]%2C ( event_interval(Evt%2C Begin%2C End)%2C number(End)%2C Duration is End - Begin )%2C Durations)%2C max_member([MaxDuration%2C LongestEvt]%2C Durations).\"\n      }\n    ],\n    \"robots\": [\n      {\n        \"name\": \"PR2\",\n        \"value\": \"pr2\",\n        \"img\": \"https://intel4coro.github.io/coai-vib/img/pr2_urdf_white1.png\",\n        \"knowledge_bases\": \"https://data.open-ease.org/QA?neem_id=6526790ced1a1bfc415a1d38\u0026q=findall%28%5BDuration%2C%20Evt%5D%2C%0A%20%20%28%20%20event_interval%28Evt%2C%20Begin%2C%20End%29%2C%0A%20%20%20%20%20number%28End%29%2C%0A%20%20%20%20%20Duration%20is%20End%20-%20Begin%0A%20%20%29%2C%0A%20%20Durations%29%2C%0Amax_member%28%5BMaxDuration%2C%20LongestEvt%5D%2C%20Durations%29\"\n      }\n    ],\n    \"tasks\": [\n      {\n        \"name\": \"Cutting: Technique halving\",\n        \"value\": \"halving\"\n      }\n    ]\n  },\n  \"actions\": [\n    {\n      \"name\": \"Run Code\",\n      \"value\": \"run\",\n      \"description\": \"Run code on Binderhub.\",\n      \"primary\": true,\n      \"url\": \"https://binder.intel4coro.de/v2/gh/IntEL4CoRo/COAI/master?urlpath=lab%2Ftree%2Fnotebooks%2F\",\n      \"options\": [\n        \"environments\",\n        \"robots\",\n        \"tasks\"\n      ],\n      \"available\": {\n        \"environments=apartment|robots=pr2|tasks=chopping\": \"https://binder.intel4coro.de/v2/gh/sunava/pycram/6083d5a6c005a862a56bf60deefc13a615f89121?urlpath=lab%2Ftree%2Fdemos%2Fpycram_cutting_demo%2Fcutting-example.ipynb\",\n        \"environments=apartment|robots=pr2|tasks=halving\": \"https://binder.intel4coro.de/v2/gh/sunava/pycram/6083d5a6c005a862a56bf60deefc13a615f89121?urlpath=lab%2Ftree%2Fdemos%2Fpycram_cutting_demo%2Fcutting-example.ipynb\",\n        \"environments=kitchen|robots=pr2|tasks=halving\": \"https://binder.intel4coro.de/v2/gh/sunava/pycram/6083d5a6c005a862a56bf60deefc13a615f89121?urlpath=lab%2Ftree%2Fdemos%2Fpycram_cutting_demo%2Fcutting-example.ipynb\",\n        \"environments=kitchen|robots=pr2|tasks=chopping\": \"https://binder.intel4coro.de/v2/gh/sunava/pycram/6083d5a6c005a862a56bf60deefc13a615f89121?urlpath=lab%2Ftree%2Fdemos%2Fpycram_cutting_demo%2Fcutting-example.ipynb\"\n    }\n    },\n    {\n      \"name\": \"Inspect Knowledge Graph\",\n      \"value\": \"openease\",\n      \"description\": \"OpenEASE\",\n      \"url\": \"href=\\\"https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2Fnotebooks%2FFoodCuttingQueries.ipynb\",\n      \"options\": [\n        \"environments\",\n        \"robots\",\n        \"tasks\"\n      ],\n      \"available\": {\n         \"environments=apartment|robots=pr2|tasks=chopping\": \"https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2f Notebooks%2F Food Cutting Queries.ipynb\",\n          \"environments=apartment|robots=pr2|tasks=halving\": \"https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2f Notebooks%2F Food Cutting Queries.ipynb\",\n          \"environments=kitchen|robots=pr2|tasks=halving\": \"https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2f Notebooks%2F Food Cutting Queries.ipynb\",\n          \"environments=kitchen|robots=pr2|tasks=chopping\": \"https://binder.intel4coro.de/v2/gh/Food-Ninja/FoodCutting.git/HEAD?urlpath=notebooks%2f Notebooks%2F Food Cutting Queries.ipynb\"\n      }\n    },\n    {\n      \"name\": \"Assets\",\n      \"value\": \"assets\",\n      \"url\": \"https://coai-jrc.de/virtual-building/\"\n    }\n  ]\n}\n")
+  const App = {
+    data() {
+      return {
+        actions: data.actions,
+        selectOptions: Object.keys(data.options).map(v => {
+          return {
+            name: v,
+            noImg: data.options[v].map(v => !!v.img).filter(v => v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+          }
+        }),
+        updatedOptions: Object.keys(data.options).map(v => {
+          return {
+            name: v,
+            noImg: data.options[v].map(v => !!v.img).filter(v => v).length === 0,
+            selected: data.options[v][0],
+            options: data.options[v]
+
+          }
+        })
+      };
+    },
+    computed: {
+      selectedNotebookId() {
+        const newValue = this.selectOptions
+          ? this.selectOptions.map(v => v.name + '=' + v.selected.value).join('|')
+          : ''
+        return newValue
+      },
+      selectedNotebookIdUpdated() {
+        const newValue = this.selectOptions
+          ? this.updatedOptions.map(v => v.name + '=' + v.selected.value).join('|')
+          : ''
+        return newValue
+      },
+      errorMsgs() {
+        let _arr = this.actions
+          .filter(act => !this.getActionUrl(act))
+          .map(act => `"${act.name}"`)
+        let selectionStr = this.selectedNotebookId
+          ? ` for options: \n\n${this.selectedNotebookId.replace(/\|/g, '\n')}`
+          : '!'
+        return _arr.length === 0 ? '' : `${_arr.join(',')} is currently unavailable${selectionStr}`
+      },
+      envs() {
+        this.filterOptions()
+        return this.updatedOptions.length > 0 ? [this.updatedOptions[0]] : [];
+        
+      },
+      robos() {
+        const selectedEnvironment = this.updatedOptions[0].selected.value;
+        this.filterOptions(selectedEnvironment)
+        return this.updatedOptions.length > 1 ? [this.updatedOptions[1]] : [];
+        
+      },
+      taskes() {
+        if (this.selectOptions.length > 2){
+          const selectedEnvironment = this.updatedOptions[0].selected.value;
+          const selectedRobot = this.updatedOptions[1].selected.value;
+          this.filterOptions(selectedEnvironment,selectedRobot)
+          return this.updatedOptions.length > 2 ? [this.updatedOptions[2]] : [];
+        }
+        return this.selectOptions.length > 2 ? [this.selectOptions[2]] : null;
+      }
+    },
+    methods: {
+      getActionUrl(action) {
+        if (!action.url) return ''
+        let _url = action.url
+        if (action.options && action.available) {
+          let _notebookUrl = action.available[this.selectedNotebookIdUpdated]
+          if (!_notebookUrl) return ''
+          if (isAbsoluteUrl(_notebookUrl)) return _notebookUrl
+          _url += _notebookUrl
+        }
+        return _url
+      },
+      filterOptions(selectedEnv = '',selectedRobo = ''){
+        const availableConfigs = this.actions[0].available;
+        if (availableConfigs !== null){
+          const OptionSet = new Set();
+          let OptionList = []
+          let regex = '';
+          let optionIndex = 1;
+
+          if (selectedEnv === '') {
+              regex = new RegExp(`environments=([^|]+)`);
+              optionIndex = 0
+          }
+          else if (selectedRobo === ''){
+              regex = new RegExp(`environments=${selectedEnv}\\|robots=([^|]+)`);
+              optionIndex = 1
+          }
+          else {
+              regex = new RegExp(`environments=${selectedEnv}\\|robots=${selectedRobo}\\|tasks=([^|]+)`);
+              optionIndex = 2
+          }
+          
+          for (const key in availableConfigs) {
+              const match = regex.exec(key);
+              if (match) {
+              for (const ind in this.selectOptions[optionIndex].options){
+                  const dicts = this.selectOptions[optionIndex].options[ind]
+                  const name = dicts['name']
+                  if ((dicts['value'] === match[1]) && (!OptionSet.has(name)))
+                  {
+                  OptionSet.add(name);
+                  OptionList.push(dicts);
+                  }
+              }
+              }
+          }
+
+          
+          OptionList.sort(function(a,b){
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            if (nameA < nameB){
+              return -1;
+            }
+            if (nameA > nameB){
+              return 1;
+            }
+            return 0;
+          })
+
+          this.updatedOptions[optionIndex].options = []
+          this.updatedOptions[optionIndex].options = Array.from(OptionList)
+          this.updatedOptions[optionIndex].selected = this.updatedOptions[optionIndex].options[0]
+
+        }
+        
+      }
+    },
+    components: {
+      "p-button": primevue.button,
+      "p-overlaypanel": primevue.overlaypanel,
+      "p-dropdown": primevue.dropdown
+    }
+  };
+
+  const app = createApp(App);
+  app.use(primevue.config.default);
+  app.mount('#vueapp1709061070928507916');
 </script>
         
         
@@ -500,7 +857,7 @@
 
 
 
-<div class="vue-app" id="vueapp1709052170764070717">
+<div class="vue-app" id="vueapp1709061070977406865">
   
   <div class="row">
 
@@ -772,7 +1129,7 @@
 
   const app = createApp(App);
   app.use(primevue.config.default);
-  app.mount('#vueapp1709052170764070717');
+  app.mount('#vueapp1709061070977406865');
 </script>
         
         
@@ -795,23 +1152,25 @@
     </div>
   </div>
 
+          
         
             
-          
+        </div>  
       </div>
         
-      <div class="flex-item-right" style="background-color: rgb(135, 161, 172, 0.09);">
+      
+      <div class="flex-item-right">
         
         <div style="position: relative;">
-            <div style="position: fixed; top: 45px; overflow-y: scroll;">
+            <div style="top: 45px; overflow-y: scroll;">
               <a href="https://www.uni-bremen.de/">
-                <img src='https://intel4coro.github.io/ViB-public/img/UHB_Logo_Web_RGB.png' style="padding: 30%;">
+                <img src='https://intel4coro.github.io/ViB-public/img/UHB_Logo_Web_RGB.png' style="padding: 20%; margin-top: 45px">
               </a>
               <a href="https://ai.uni-bremen.de/">
-                <img src='https://intel4coro.github.io/ViB-public/img/Logo%20-%20IAI%20Schrift.png' style="padding: 25%; margin-top: -15%;">
+                <img src='https://intel4coro.github.io/ViB-public/img/Logo%20-%20IAI%20Schrift.png' style="padding: 10%;">
               </a>
               <a id="myImageURL" href="">
-                <img id="myImage" src='https://intel4coro.github.io/ViB-public/img/bmbf.png' style="padding: 25%; margin-top: -10%;">
+                <img id="myImage" src='https://intel4coro.github.io/ViB-public/img/bmbf.png' style="padding: 10%;">
               </a>
             </div>
         </div>
